@@ -15,6 +15,5 @@ eureka:
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       defaultZone: http://registry-server-2:7776/eureka/
 logging:
-  file: reigstry-server.log
   level: info
-  path: /tmp
+  path: /tmp/reigstry-server.log
