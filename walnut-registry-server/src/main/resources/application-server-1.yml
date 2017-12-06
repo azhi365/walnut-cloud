@@ -6,10 +6,15 @@ server:
   port: 7777
 eureka:
   instance:
-    hostname: registry-server-1
+    #hostname: registry-server-1
+    prefer-ip-address: true
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       defaultZone: http://registry-server-2:7776/eureka/
+logging:
+  file: reigstry-server.log
+  level: info
+  path: /tmp
