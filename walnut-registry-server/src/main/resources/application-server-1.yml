@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: walnut-registry-server
+  profiles: server-1
+server:
+  port: 7777
+eureka:
+  instance:
+    hostname: registry-server-1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://registry-server-2:7776/eureka/

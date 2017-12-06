@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.innstack.walnut</groupId>
+        <artifactId>walnut-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../walnut-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>walnut-data-kafka</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>walnut-data-kafka</name>
+
+    <modules>
+        <module>walnut-data-kafka-producer</module>
+        <module>walnut-data-kafka-consumer</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>0.10.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.innstack.walnut</groupId>
+            <artifactId>walnut-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>
